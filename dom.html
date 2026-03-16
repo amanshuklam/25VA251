@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ //The Document Object Model (DOM) is a programming interface for web documents (HTML/XML) that represents the page as a structured tree of nodes. It allows languages like JavaScript to dynamically access, change, add, or remove document content, structure, and style. The DOM is created by browsers upon loading a page, enabling interactive, dynamic web applications. 
+ <h2> check your age t cast vote!</h2>
+ <form action="">
+    <input type="number" placeholder="enter your age !" name="age" id="age"/>
+    <input type="submit" value="submit"/>
+ </form>
+<script>
+    function result(){
+        let myage=document.getElementById('age').value;
+        if (age>=18){
+            alert("eligilibe");
+        }
+        else{
+            alert("not eligible");
+        }
+
+    }
+    function changecolor(){
+        let inputvalue=document.getElementById('text').value;
+        let inputtext=document.getElementById('age');
+        inputtext.innerHTML=inputvalue;
+        
+    }
+
+    </script>
+</body>
+</html>

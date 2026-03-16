@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objectinjs</title>
+</head>
+<body>
+    <script>
+        //object in js:collection(pair) of keys (properties) and its value.
+        //create an object using literal way...
+        let student ={
+            name:"Abhay",
+            age: 25,
+            isMarried:false,
+            address:{
+                streetNo:23,
+                area:"Indrapuram",
+                city:"GZB",
+                pincode:201009
+            },
+            course:"b.tech",
+            branch:"cse",
+            year:2025,
+            getinfo:function(){
+                return "my education is " + student.branch;
+            },
+            subjects:["maths","hindi","science","english"],
+            examdone:null
+
+        };
+        console.log(student.address.pincode);
+        console.log(student.getinfo());
+        console.log(student.subjects[2]);
+        console.log(student);
+
+        let keylength=Object.keys(student);
+        console.log(keylength.length);
+        for(let i=0;i<keylength.length;i++){
+            console.log(student[keylength[i]]);
+        }
+    </script>
+    
+</body>
+</html>
