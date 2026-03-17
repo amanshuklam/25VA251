@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  // fuction are the block of code, designed to perform specific task
+  //types of function 
+  // normal fuction without parameter
+  function demo(){
+    console.log(" Hello JS");
+  }
+  demo();
+  function demo1(text){
+    console.log(" Hello JS " + text);
+  }
+  demo1("GOOD");
+  function add(a,b){
+    var num1=a;
+    var num2=b;
+    var res= num1+num2;
+    console.log(res);
+
+  }
+  add(3,6);
+  function cal(){
+    function add(a,b){
+        console.log("addition is "+ (a+b));
+    }
+    function sub(a,b){
+        console.log("sub is "+ (a-b));
+    }
+    function mul(a,b){
+        console.log("mul is "+ (a*b));
+    }
+    mul(9,6);
+    sub(5,7);
+    add(5,7);
+  }
+  cal();
+  // Anonymous function:  a function that 
+   
+let msg=function(){
+    console.log("hello abes");
+}
+msg();
+let msg2=(age)=>{
+    if(age>=18){
+        console.log("valid age ");
+
+    }
+}
+msg2(23);
+function cal3(a,b,callback  ){
+    var num1=a;
+    console.log("first number is "+ num1);
+    var num2=b;
+    console.log(" second is "+ num2);
+    var res=num1+num2;
+    callback(res);
+}
+    function display(res){
+        console.log(" result is "+res);
+    }
+    cal3(3,4,display);
+    function greeting(){
+        console.writeln(" hello student ");
+    }
+    function loading(){
+        document.writeln("data loading ");
+    }
+    loading();
+    setTimeout(greeting,200);
+    // java script promises
+    //three primary stages: pending (initial state), fulfilled (success), and rejected (failure)
+    let promise= new Promise(function(resolve,reject){
+        let myage=23;
+        if(myage>=18){
+            resolve ("valid age");
+        }
+        else{
+            reject("wait for next year");
+        }
+
+     
+    });
+    promise.then(result=>console.log(result)).catch(error=>console.log(error));
+    //async and await are modern JavaScript keywords that allow developers to write asynchronous, non-blocking code in a clean style that looks like synchronous code
+    async function userdata(){
+        let userresponse=await fetch();
+        let prores=await userresponse.json();
+        console.log(prores);
+        
+    }
+catch(error){
+    console.log("not valid data "+ error)
+
+}
+
+
+    </script>
+</body>
+</html>
