@@ -3,104 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>function js </title>
 </head>
 <body>
     <script>
-  // fuction are the block of code, designed to perform specific task
-  //types of function 
-  // normal fuction without parameter
-  function demo(){
-    console.log(" Hello JS");
-  }
-  demo();
-  function demo1(text){
-    console.log(" Hello JS " + text);
-  }
-  demo1("GOOD");
-  function add(a,b){
-    var num1=a;
-    var num2=b;
-    var res= num1+num2;
-    console.log(res);
+        //funtion
+       // normal funtion decleration
+       function demo(){
+        console.log("Hello Amarjeet");
+       }
+       demo();//funtion call
+       //with pairameter
+    //    function call(a,b){
+    //     var x=a;
+    //     var y=b;
+    //     console.log("addition of a and b: "+(x+y))
+    //    }
+    //    call(3,4)
+       //funtion with defalt vailu
+    //    var num1=a;
+    //    var num2=b;
+    //    function add(a,b=5){
+    //     var num1=a;
+    //    var num2=b;
+    //     var res1=num1+num2;
+    //     console.log("addition of a and b: "+ res1);
+    //    }
+    //    function multiply(a,b){
+    //     var n1=a;
+    //    var n2=b;
+    //     var res2=n1*n2;
+    //     console.log("multiplication of a and b: "+ res2);
+    //    }
+    //    function div(a,b){
+    //     var num1=a;
+    //    var num2=b;
+    //     var res3=num1/num2;
+    //     console.log("divition of a and b: "+ res3);
+    //    }
+    //    add(4,8);
+    //    multiply(4,2);
+    //    div(9,4);
+//anononemas function
+// let demo1=function(){
+//     console.log("hello abhishek ");
 
-  }
-  add(3,6);
-  function cal(){
-    function add(a,b){
-        console.log("addition is "+ (a+b));
-    }
-    function sub(a,b){
-        console.log("sub is "+ (a-b));
-    }
-    function mul(a,b){
-        console.log("mul is "+ (a*b));
-    }
-    mul(9,6);
-    sub(5,7);
-    add(5,7);
-  }
-  cal();
-  // Anonymous function:  a function that 
-   
-let msg=function(){
-    console.log("hello abes");
+// }
+// demo1();
+// //arrow funtion
+// let demo2=()=>{
+//     console.log("hello anjali");
+// }
+// demo2();
+// //single line function 
+// let demo3=()=>console.log("hello abes ec");
+// demo3();
+// //iifi function
+// (function(){
+// console.log("ram is going to home");
+// })();
+// //callback in synchronus
+function addR(callback){
+    var h=44;
+    var m=88;
+    var e=77;
+    var c=98;
+    var res=h+m+e+c;
+    var per=res/4;
+    callback(res)
+    callback(per)
 }
-msg();
-let msg2=(age)=>{
-    if(age>=18){
-        console.log("valid age ");
-
-    }
-}
-msg2(23);
-function cal3(a,b,callback  ){
-    var num1=a;
-    console.log("first number is "+ num1);
-    var num2=b;
-    console.log(" second is "+ num2);
-    var res=num1+num2;
-    callback(res);
-}
-    function display(res){
-        console.log(" result is "+res);
-    }
-    cal3(3,4,display);
-    function greeting(){
-        console.writeln(" hello student ");
-    }
-    function loading(){
-        document.writeln("data loading ");
-    }
-    loading();
-    setTimeout(greeting,200);
-    // java script promises
-    //three primary stages: pending (initial state), fulfilled (success), and rejected (failure)
-    let promise= new Promise(function(resolve,reject){
-        let myage=23;
-        if(myage>=18){
-            resolve ("valid age");
-        }
-        else{
-            reject("wait for next year");
-        }
-
-     
-    });
-    promise.then(result=>console.log(result)).catch(error=>console.log(error));
-    //async and await are modern JavaScript keywords that allow developers to write asynchronous, non-blocking code in a clean style that looks like synchronous code
-    async function userdata(){
-        let userresponse=await fetch();
-        let prores=await userresponse.json();
-        console.log(prores);
-        
-    }
-catch(error){
-    console.log("not valid data "+ error)
+function result(res,per){
+    console.log("your tolat marks: "+ res );
+    console.log("percentage:" + per);
 
 }
-
-
+addR(result);
+//
+function hello(){
+    console.log("iife in js:",30000)
+}
+hello();
+ 
+//call back function
+//home work
     </script>
+    
 </body>
 </html>
